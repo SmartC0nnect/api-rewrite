@@ -13,16 +13,18 @@ class Users():
 
 
     def getDevices(self, userid, args):
+        print(userid)
+        cur.execute(f"SELECT devicetype, name, deviceid FROM devices WHERE userid = %s", (userid,))
+        data = cur.fetchall()
 
-        cur.execute(f"SELECT devicetype, name FROM devices WHERE userid = %s", (userid,))
+        cur.execute(f"SELECT * FROM devicetypes")
         devices = cur.fetchall()
 
-        if type == "actor:2led":
-            value1 = self.checkCases(actors[0][1])
-            value2 = self.checkCases(actors[0][2])
-            print(f"value1: {value1}")
-        else:
+        newdata = []
+        for x in data:
+            for y in devices:
+               if x[0] == y[0]:
+                   newdata.append([x[1], x[2], list(y)])
 
-            return {"status": 501}
 
-        return [{"value1": value1, "value2": value2}]
+        return {"devices": newdata}

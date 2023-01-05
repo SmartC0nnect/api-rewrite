@@ -48,7 +48,9 @@ User management
 '''
 @app.route('/users/<userid>/devices', methods=['GET'])
 def getDevices(userid):
-    data = Users().gerDevices(userid, request.args)
+    data = Users().getDevices(userid, request.args)
+
+
     return data
 
 
