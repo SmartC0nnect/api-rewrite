@@ -53,4 +53,11 @@ programmiert jedoch dann in Python übersetzt.
 ### Sequencediagram
 ![Image](http://school.cv3.xyz/GFS/12.1-IT/data/Sequenzdiagramm/Untitled.svg)
 
+---
+
+### Demo
+In diesem Beispiel wurde programmiert, dass die Rote und die Blaue LED an gehen, wenn es dunkel ist.
+Wenn ein Licht angeht, scheint nur die Blaue, und wenn das Licht sehr hell ist, gehen beide LEDs aus.
+
+[<img alt="Video" height="200" src="http://school.cv3.xyz/GFS/12.1-IT/data/IMG_6712.png"/>](http://school.cv3.xyz/GFS/12.1-IT/data/IMG_6712.mov)
 
