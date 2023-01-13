@@ -10,5 +10,5 @@ db = connector.connect(
     autocommit=True
 
 )
-
 cur = db.cursor()
+

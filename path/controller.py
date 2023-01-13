@@ -15,7 +15,8 @@ class Controller():
         value1 = args.get("value1")
         value2 = args.get("value2")
 
-        cur.execute(f"INSERT INTO sensordata (deviceKey, type, value1, value2) VALUES (%s, %s, %s, %s) ON DUPLICATE KEY UPDATE value1=%s, value2=%s", (key, type, value1, value2, value1, value2))
+        cur.execute(f"INSERT INTO sensordata (deviceKey, type, value1, value2) VALUES (%s, %s, %s, %s) "
+                    f"ON DUPLICATE KEY UPDATE value1=%s, value2=%s", (key, type, value1, value2, value1, value2))
         return {"status": 200}
 
 
