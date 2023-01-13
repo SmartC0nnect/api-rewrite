@@ -11,7 +11,14 @@ erledigen soll. Das gesamte Projekt basiert auf den Sprachen Python, C, PHP, Jav
 Für diese GFS wurden Python, C und SQL verwendet. Die API wurde ursprünglich in Javascript/Typescript 
 programmiert jedoch dann in Python übersetzt.
 
+[Quellen der Präsentation](http://school.cv3.xyz/GFS/12.1-IT/sources/)
 <br>
+[Download Repo (code + documentation)](http://github.com/SmartC0nnect/api-rewrite/archive/refs/heads/main.zip)
+
+<br>
+
+
+
 
 > ### Folgende Librarys werden verwendet, die nicht selbst programmiert sind, sondern entweder auf pypi.org veröffentlicht worden sind oder direkt durch python installiert werden.
 > - flask
