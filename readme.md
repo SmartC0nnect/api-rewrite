@@ -28,13 +28,13 @@ programmiert jedoch dann in Python übersetzt.
 > - mysql *(mysql-connector-python)*
 
 > ### Beschreibung server.py
-> <br> Das Python Script läd die öffentliche Library flask und flask_cors.
+> Das Python Script läd die öffentliche Library flask und flask_cors.
 > <br> Danach werden die eigene Datei Controller geladen (Im Sourcecode werden noch weitere dateien geladen, diese sind für die GFS allerdings unrelevant.)
 > <br> Durch die erstelle Flask app werden dann die routen freigegeben, und ein Objekt der Klasse Controller() erstellt, und eine jeweilige Funktion zum Path aufgerufen.
 > <br> Anschließend werden die daten zurück an den client gesendet.
 
 > ### Beschreibung controller.py
-> <br> Im Konstruktor der Funktion (__init__) wird versucht sich mit der datenbank erneut zu verbinden, sollte die Verbindung sich zuvor geschlossen haben.
+> Im Konstruktor der Funktion (__init__) wird versucht sich mit der datenbank erneut zu verbinden, sollte die Verbindung sich zuvor geschlossen haben.
 > <br> In der Klasse Controller() gibt es 2 Funktionen für die jeweiligen URL-Pfade.
 > <br> Die erste schreibt die vom Sensor gegebenen Daten in die Datenbank und gibt den status 200 zurück.
 > <br> Die zweite Frägt die Daten mit dem zugehörigen Key vom Akteur ab, und ruft daraufhin eine dritte Funktion auf.
@@ -43,8 +43,17 @@ programmiert jedoch dann in Python übersetzt.
 > <br> Der Akteur führt dann die Aktionen aus.
 
 > ### Beschreibung database.py
-> <br> Diese Datei wird in jeder anderen importiert.
+> Diese Datei wird in jeder anderen importiert.
 > <br> Sie stellt eine Verbindung zur Datenbank her und speichert den Cursor in einer Variable, die dann überall genutzt werden kann.
+---
+> ## Installation
+> Zur installation muss Python 3.10 installiert sein.
+> <br>```$ pip install flask```
+> <br>```$ pip install flask-cors```
+> <br>```$ pip install mysql-connector-python```
+> <br>Nun muss die datei smartconnect.sql in einen MySql server imporiert werden. Die Anmeldedaten können in database.py geändert werden.
+> <br>```$ py -3 server.py```
+
 ---
 
 ### Chen notation
