@@ -33,7 +33,7 @@ programmiert jedoch dann in Python übersetzt.
 > <br> Durch die erstelle Flask app werden dann die routen freigegeben, und ein Objekt der Klasse Controller() erstellt, und eine jeweilige Funktion zum Path aufgerufen.
 > <br> Anschließend werden die daten zurück an den client gesendet.
 
-> ###Beschreibung controller.py
+> ### Beschreibung controller.py
 > <br> Im Konstruktor der Funktion (__init__) wird versucht sich mit der datenbank erneut zu verbinden, sollte die Verbindung sich zuvor geschlossen haben.
 > <br> In der Klasse Controller() gibt es 2 Funktionen für die jeweiligen URL-Pfade.
 > <br> Die erste schreibt die vom Sensor gegebenen Daten in die Datenbank und gibt den status 200 zurück.
