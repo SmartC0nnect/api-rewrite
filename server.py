@@ -29,7 +29,10 @@ def updateData(key, type):
 def getData(key, type):
     data = Controller().getData(key, type, request.args)
     return data
-
+@app.route('/controller/getcount', methods=['GET'])
+def getCount():
+    data = Controller().getCount(request.args)
+    return data
 
 '''
 Website data

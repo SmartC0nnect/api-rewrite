@@ -36,6 +36,16 @@ class Controller():
 
         return [{"value1": value1, "value2": value2}]
 
+    def getCount(self, args):
+        cur.execute(f"SELECT * FROM botshop WHERE name = 'money'")
+        count = cur.fetchall()
+        count = count[0][1]
+
+        if len(count) < 2: count = "0"+count
+        if len(count) < 3: count = "0"+count
+
+        return [{"0": int(count[0]), "1": int(count[1]), "2": int(count[2])}]
+
 
 
     def checkCases(self, actor):
